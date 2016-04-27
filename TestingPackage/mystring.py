@@ -56,9 +56,18 @@ class MyString():
 
     # Removes all occurrences of the specified character from the current string.
     def removeChar(self,c):
-        themainstring=list(self)
-        themainstring.remove(c)
-        return ''.join(themainstring)
+        themainstring=self.str
+        listcount=len(themainstring)
+        theextraletters=""
+        counter=0
+        while counter<listcount:
+            if themainstring[counter]!=c:
+                theextraletters = theextraletters + themainstring[counter]
+                counter = counter + 1
+            else:
+                counter = counter + 1
+
+        return theextraletters
 
 
     #Invert the current string.
