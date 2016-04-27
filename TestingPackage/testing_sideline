@@ -1,0 +1,16 @@
+def invert(self):
+    thestring = self.str
+    thelist = thestring.split(' ')
+    starting = 0
+    ending = len(thelist) - 1
+    u = 0
+    while u < ending:
+        if (starting < ending):
+            stringtemp = thelist[u]
+            thelist[u] = thelist[u + 1]
+            thelist[u + 1] = stringtemp
+            starting = starting + 1
+            u = u + 1
+    return thelist[u]
+
+
